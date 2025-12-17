@@ -33,4 +33,17 @@ export class UsuariosService {
   public deleteUsuario(id : string) : Observable<Usuarios>{
     return this._http.delete<Usuarios>(`${this.baseURL}/${id}`)
   }
+
+//   getUsuarios() {
+//     this._usuariosServices.getAllUsuarios().subscribe((data: Usuarios[]) => {
+//       this.usuariosList = data;
+
+//       this.usuariosList.forEach(usuario => {
+//         this.nombresUsuarios.push(usuario.name)
+//       })
+
+//       localStorage.setItem(this.localStorageKey, JSON.stringify(this.nombresUsuarios))
+//     })
+//   }
+// 
 }
