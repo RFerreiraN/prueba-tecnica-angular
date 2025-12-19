@@ -10,6 +10,8 @@ import { Usuarios } from '../models/usuarios.model';
 })
 export class UsuariosComponent implements OnInit {
 
+  public usuarios : string[] = [];
+
   public users!: Usuarios[]
     public localStorageKey : string = 'usuarios'
 
@@ -18,7 +20,8 @@ export class UsuariosComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-     JSON.parse(localStorage.getItem(this.localStorageKey) || '[]')
+    this.usuarios = JSON.parse(localStorage.getItem(this.localStorageKey) || '[]')
+    console.log(this.usuarios);
   }
 
 
